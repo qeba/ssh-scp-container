@@ -1,0 +1,11 @@
+services:
+  scp:
+    build: .
+    volumes:
+      - ./upload:/home/foo/upload
+    ports:
+      - "2230:22"
+    environment:
+      - USERNAME=foo
+      - PASSWORD=pass
+      - UID_NUM=1001
